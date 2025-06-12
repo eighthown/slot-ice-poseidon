@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Poseidon: The Gaming Vanguard</title>
+    <meta name="description" content="The official vanguard for Ice Poseidon. Experience groundbreaking live content, premier casino action, and the unfiltered narrative of a streaming pioneer.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://iceposeidon-streamer.com/">
+    <meta property="og:title" content="Ice Poseidon: The Gaming Vanguard & Live Hub">
+    <meta property="og:description" content="Step into the world of Ice Poseidon. Your definitive source for live IRL streams, high-stakes casino plays, and the complete streaming saga.">
+    <meta property="og:url" content="https://iceposeidon-streamer.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ice Poseidon: The Gaming Vanguard & Live Hub">
+    <meta name="twitter:description" content="Step into the world of Ice Poseidon. Your definitive source for live IRL streams, high-stakes casino plays, and the complete streaming saga.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/FFD700/121212?text=Ice+Poseidon+Vanguard">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./favicon-32x32.png" sizes="32x32" type="image/png">
+    <style>
+        :root { 
+            --bg-dark: #121212; 
+            --bg-mid: #1E1E1E; 
+            --accent1: #FFD700; 
+            --accent2: #FFAA00;
+            --text-light: #FFFFFF; 
+            --text-mid: #B3B3B3; 
+        }
+        html { scroll-behavior: smooth; }
+        body { 
+            background-color: var(--bg-dark); 
+            color: var(--text-light); 
+            font-family: 'Raleway', sans-serif; 
+            line-height: 1.7; 
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale; 
+        }
+        h1, h2, h3, h4 { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--text-light); 
+        }
+        h1 { font-size: clamp(3.2rem, 7vw, 5rem); }
+        h2 { font-size: clamp(2.4rem, 5vw, 3.4rem); text-align: center; margin-bottom: 4rem; color: var(--accent1); }
+        h3 { font-size: clamp(1.8rem, 4vw, 2.4rem); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        .btn { 
+            display: inline-block; 
+            padding: 16px 42px; 
+            background: transparent; 
+            color: var(--accent1); 
+            text-decoration: none; 
+            font-weight: bold; 
+            border: 2px solid var(--accent1);
+            transition: all 0.3s ease; 
+            cursor: pointer; 
+            text-align: center; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn:hover, .btn:focus { 
+            background-color: var(--accent1);
+            color: var(--bg-dark);
+            box-shadow: 0 0 15px var(--accent1);
+        }
+        .header { 
+            background-color: rgba(18, 18, 18, 0.8); 
+            backdrop-filter: blur(10px); 
+            padding: 1rem 0; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            width: 100%;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.8rem; font-weight: 900; color: var(--text-light); text-decoration: none; }
+        .nav-menu { display: flex; gap: 3rem; }
+        .nav-link { color: var(--text-mid); text-decoration: none; font-weight: 700; transition: color 0.3s ease; }
+        .nav-link:hover, .nav-link:focus { color: var(--accent1); }
+        .nav-toggle { display: none; }
+        .hamburger { display: block; width: 28px; height: 3px; background-color: var(--text-light); position: relative; }
+        .hamburger::before, .hamburger::after { content: ''; position: absolute; left: 0; width: 100%; height: 3px; background-color: var(--text-light); transition: all 0.3s; }
+        .hamburger::before { top: -9px; }
+        .hamburger::after { bottom: -9px; }
+        .section { padding: 6.5rem 0; }
+        .hero { 
+            height: 90vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)), no-repeat center center/cover;
+        }
+        .hero-content { animation: fadeInDown 1.5s ease-out; }
+        .hero p { font-size: 1.25rem; max-width: 650px; margin: 2rem auto 3rem; color: var(--text-mid); }
+        
+        .casino-list-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+        .casino-list-item:nth-child(even) .casino-img {
+            order: 2;
+        }
+        .casino-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+        .casino-text p {
+            color: var(--text-mid);
+            margin-bottom: 2rem;
+        }
+
+        .about-section {
+            background-color: var(--bg-mid);
+        }
+        .about-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .about-content img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid var(--accent1);
+            margin-bottom: 2rem;
+        }
+        
+        .stream-section .container {
+            text-align: center;
+        }
+        .stream-embed { position: relative; padding-top: 56.25%; border-radius: 8px; overflow: hidden; max-width: 1000px; margin: 2rem auto 0; box-shadow: 0 0 30px rgba(255, 215, 0, 0.2); }
+        .stream-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        
+        .faq-section {
+             background-color: var(--bg-mid);
+        }
+        .faq-block { max-width: 850px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid #333; }
+        .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.5rem 0; font-size: 1.3rem; font-family: 'Raleway', sans-serif; font-weight: 700; color: var(--text-light); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
+        .faq-answer p { padding-top: 0.5rem; padding-bottom: 1.5rem; margin:0; color: var(--text-mid); }
+        .faq-item.active .faq-answer { max-height: 250px; }
+        .faq-icon { transition: transform 0.4s ease; font-size: 1.5rem; font-weight: bold; color: var(--accent1); }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        
+        .footer { background-color: #000; padding: 4rem 0 2rem; text-align: center; color: var(--text-mid); }
+        .footer-links { display: flex; justify-content: center; gap: 2.5rem; margin-bottom: 2rem; }
+        .footer-links a { color: var(--text-mid); text-decoration: none; transition: color 0.3s ease; }
+        .footer-links a:hover { color: var(--accent1); }
+        .footer p { font-size: 0.9rem; letter-spacing: 0.5px; }
+        
+        .main-site-link-bar {
+            background-color: var(--accent1);
+            padding: 0.75rem;
+            text-align: center;
+        }
+        .main-site-link-bar a {
+            color: var(--bg-dark);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .main-site-link-bar a:hover {
+            transform: scale(1.03);
+            opacity: 0.9;
+        }
+
+        @media (max-width: 767px) {
+            .nav-menu { display: none; position: absolute; top: 100%; left: 0; background-color: var(--bg-dark); width: 100%; flex-direction: column; text-align: center; padding: 1rem 0; border-top: 1px solid #2a2a2a;}
+            .nav-menu.active { display: flex; }
+            .nav-toggle { display: block; background: none; border: none; cursor: pointer; }
+            .casino-list-item, .casino-list-item:nth-child(even) { grid-template-columns: 1fr; }
+            .casino-list-item:nth-child(even) .casino-img { order: 0; }
+        }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ice Poseidon",
+      "url": "https://iceposeidon-streamer.com/",
+      "sameAs": [
+        "https://kick.com/iceposeidon",
+        "https://twitter.com/REALIcePoseidon",
+        "https://www.instagram.com/ice_poseidon/"
+      ],
+      "description": "Ice Poseidon is a prominent live streamer known for his dynamic IRL adventures and high-energy casino gaming content. He engages a massive audience through his unfiltered broadcasts and strategic gameplay."
+    }
+    </script>
+</head>
+<body>
+
+    <div class="main-site-link-bar">
+        <a href="https://iceposeidon-streamer.com/" target="_blank" rel="noopener noreferrer">The Official Ice Poseidon Portal</a>
+    </div>
+
+    <header class="header">
+        <nav class="container nav">
+            <a href="#" class="nav-logo">ICE POSEIDON</a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#casinos" class="nav-link">Casinos</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#stream" class="nav-link">Live</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>The Gaming Vanguard</h1>
+                <p>Welcome to the forefront of live entertainment. This is the official hub for Ice Poseidon—your all-access pass to groundbreaking streams, high-stakes casino plays, and the unfiltered journey of a digital pioneer.</p>
+                <a href="#stream" class="btn">Join The Live Feed</a>
+            </div>
+        </section>
+
+        <section id="casinos" class="section">
+            <div class="container">
+                <h2>Premier Gaming Destinations</h2>
+                <div class="casino-list">
+                    <div class="casino-list-item">
+                        <div class="casino-img">
+                            <img src="./img/bethall.png" alt="Promotional banner for Bethall Casino" class="casino-img" loading="lazy">
+                        </div>
+                        <div class="casino-text">
+                            <h3>Bethall Gaming</h3>
+                            <p>Recognized for its extensive game library and rewarding player bonuses, Bethall is a key arena for Ice's most ambitious strategic sessions on the slots.</p>
+                            <a href="./bethall.html" target="_blank" rel="noopener noreferrer" class="btn">Explore Bethall</a>
+                        </div>
+                    </div>
+                    <div class="casino-list-item">
+                        <div class="casino-img">
+                            <img src="./img/brucebet.png" alt="Promotional banner for Brucebet Casino" class="casino-img" loading="lazy">
+                        </div>
+                         <div class="casino-text">
+                            <h3>Brucebet Platform</h3>
+                            <p>With its forward-thinking interface and flawless mobile performance, Brucebet stands out as the ideal choice for dynamic, on-the-move broadcasting.</p>
+                            <a href="./brucebet.html" target="_blank" rel="noopener noreferrer" class="btn">Explore Brucebet</a>
+                        </div>
+                    </div>
+                    <div class="casino-list-item">
+                        <div class="casino-img">
+                             <img src="./img/vincispin.png" alt="Promotional banner for Vincispin Casino" class="casino-img" loading="lazy">
+                        </div>
+                        <div class="casino-text">
+                            <h3>Vincispin Arena</h3>
+                            <p>Vincispin is the premier territory for competitive tournaments and live dealer games, where Ice frequently battles for the top of the leaderboards.</p>                            
+                            <a href="./vincispin.html" target="_blank" rel="noopener noreferrer" class="btn">Explore Vincispin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="section about-section">
+            <div class="container about-content">
+                <img src="./img/ice-poseidon.jpg" alt="A portrait of Ice Poseidon" loading="lazy">
+                <h2>The Architect of IRL</h2>
+                <p>Paul Denino, known to millions as <strong>Ice Poseidon</strong>, is more than a streamer—he's a digital architect who reshaped the landscape of live content. By pioneering the IRL (In Real Life) format, he created a new frontier of entertainment built on raw, unscripted reality.</p>
+                <p>His career is a saga of fearless exploration, from nationwide adventures to high-stakes showdowns in the casino world. He offers his audience a transparent, authentic window into a life dedicated to pushing the boundaries of what's possible in live media.</p>
+            </div>
+        </section>
+        
+        <section id="stream" class="section stream-section">
+             <div class="container">
+                <h2>The Live Command Center</h2>
+                <p>You're tuned into the main channel. Ice Poseidon's exclusive live content is broadcast on Kick. The player below is your direct connection to the action. When he's live, you're in. When he's not, the archive of past broadcasts is at your fingertips.</p>
+                <div class="stream-embed">
+                     <iframe
+                        src="https://player.kick.com/iceposeidon"
+                        title="Ice Poseidon's Live Kick.com Broadcast"
+                        allowfullscreen="true"
+                        allow="autoplay; encrypted-media; picture-in-picture">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section faq-section">
+            <div class="container faq-block">
+                 <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Who exactly is Ice Poseidon?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ice Poseidon, or Paul Denino, is a landmark American live streamer who became a household name by pioneering the IRL (In Real Life) genre. His content is legendary for being unscripted, high-octane, and consistently unpredictable.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Where can I watch his streams?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ice Poseidon streams exclusively on Kick.com. His official channel, kick.com/iceposeidon, is the one and only source for his live content.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are his preferred casino games?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>He primarily engages with fast-paced online slots, where he's known for exploring new titles and making high-stakes plays. He also occasionally dives into classic casino table games.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h4>Follow The Vanguard</h4>
+            <div class="footer-links">
+                <a href="https://kick.com/iceposeidon" target="_blank" rel="noopener noreferrer">Kick</a>
+                <a href="https://twitter.com/REALIcePoseidon" target="_blank" rel="noopener noreferrer">Twitter (X)</a>
+                <a href="https://www.instagram.com/ice_poseidon/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+            <p>&copy; 2025 iceposeidon-streamer.com. All Rights Reserved.</p>
+            <p>Disclaimer: All content is for entertainment purposes. Gambling involves significant risk. Please play responsibly and only if you are of legal age in your jurisdiction.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const button = item.querySelector('.faq-question');
+                if (button) {
+                    button.addEventListener('click', () => {
+                        const wasActive = item.classList.contains('active');
+                        faqItems.forEach(i => i.classList.remove('active'));
+                        if (!wasActive) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        document.querySelector(href).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        if (navMenu.classList.contains('active')) {
+                           navMenu.classList.remove('active');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
